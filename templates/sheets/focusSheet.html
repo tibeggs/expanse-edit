@@ -1,0 +1,38 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+        <h1 class="name prop">
+            <input name="name" type="text" value="{{item.name}}" placeholder="Name" />
+            <label>Name</label>
+        </h1>
+        <div class="sub-header">
+            <div class="check-prop">
+                <input type="checkbox" name="data.improved" {{checked data.improved}} data-dtype="Boolean" />
+                <label for="data.improved">Improved</label>
+            </div>
+            <div class="prop">
+                <select name="data.defaultAbility" data-dtype="String">
+                    {{#select data.defaultAbility}}
+                    <option value="None">None</option>
+                    <option value="Accuracy">Accuracy</option>
+                    <option value="Communication">Communication</option>
+                    <option value="Constitution">Constitution</option>
+                    <option value="Dexterity">Dexterity</option>
+                    <option value="Fighting">Fighting</option>
+                    <option value="Intelligence">Intelligence</option>
+                    <option value="Perception">Perception</option>
+                    <option value="Strength">Strength</option>
+                    <option value="Willpower">Willpower</option>
+                    {{/select}}
+                </select>
+                <label>Default Ability</label>
+            </div>
+        </div>
+    </header>
+    <section class="sheet-body">
+        <div class="wide-section">
+            <h3>Description</h3>
+            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+        </div>
+    </section>
+</form>

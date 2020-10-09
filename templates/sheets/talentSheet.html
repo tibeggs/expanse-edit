@@ -1,0 +1,27 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+        <h1 class="name prop">
+            <input name="name" type="text" value="{{item.name}}" placeholder="Name" />
+            <label>Name</label>
+        </h1>
+        <div class="sub-header">
+            <div class="prop">
+                <select name="data.rank" data-dtype="String">
+                    {{#select data.rank}}
+                    <option value="1">Novice</option>
+                    <option value="2">Expert</option>
+                    <option value="3">Master</option>
+                    {{/select}}
+                </select>
+                <label>Current Rank</label>
+            </div>
+        </div>
+    </header>
+    <section class="sheet-body">
+        <div class="wide-section">
+            <h3>Description</h3>
+            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+        </div>
+    </section>
+</form>

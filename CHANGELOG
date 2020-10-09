@@ -1,0 +1,11 @@
+Based on the Blue Rose from Andrew Nichols (studio315b) 
+
+Removed Arcania files and refernces
+Removed Fatigue files and refernces
+Replaced Race with Origin
+added Background, Social Class, Profession, and Drive
+Added Toughness stat
+Replaced health with Fortune
+Repalced convestion with Level
+Added Experience and Income
+Added Conditions textbox

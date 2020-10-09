@@ -1,0 +1,16 @@
+<div class="dice-roll">
+    <h3>{{name}}</h3>
+    <div class="dice-result">
+        <div class="dice-formula">
+            <span class="die">{{rolls.d0}}</span>
+            <span class="die">{{rolls.d1}}</span>
+            <span class="die drama">{{rolls.d2}}</span>
+            {{#if modifier}}
+            <span>{{modifier}}</span>
+            {{/if}}
+        </div>
+        <div class="dice-total">
+            {{total}} ({{stuntPoints}})
+        </div>
+    </div>
+</div>

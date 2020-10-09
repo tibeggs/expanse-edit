@@ -1,0 +1,282 @@
+<form class="{{cssClass}}" autocomplete="off">
+    {{!-- Sheet Header --}}
+    <header class="sheet-header">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+        <h1 class="name prop">
+            <input name="name" type="text" value="{{actor.name}}" placeholder="Name" />
+            <label for="name">Name</label>
+        </h1>
+        <div class="sub-header">
+			<div class="origin prop">
+					<select name="data.origin" data-dtype="string">
+						{{#select data.origin}}
+						<option value="0">None</option>
+						<option value="1">Earth</option>
+						<option value="2">Mars</option>
+						<option value="3">Belt</option>
+						{{/select}}
+					</select>
+					<label for="data.origin">Origin</label>
+				</div>
+				<div class="class prop">
+					<select name="data.class" data-dtype="String" >
+						{{#select data.class}}
+						<option value="0">None</option>
+						<option value="1">Outsider</option>
+						<option value="2">Lower Class</option>
+						<option value="3">Middle Class</option>
+						<option value="4">Upper Class</option>
+						{{/select}}
+					</select>
+					<label for="data.class">Social Class</label>
+				</div>
+				<div class="background prop">
+					<input name="data.background" type="text" value="{{data.background}}" placeholder="Background"
+						data-dtype="String" />
+					<label for="data.background">Background</label>
+				</div>
+				<div class="profession prop">
+					<input name="data.profession" type="text" value="{{data.profession}}" placeholder="Profession" data-dtype="String" />
+					<label for="data.profession">Profession</label>
+				</div>
+				<div class="drive prop">
+					<input name="data.drive" type="text" value="{{data.drive}}" placeholder="Drive" data-dtype="String" />
+					<label for="data.drive">Drive</label>
+				</div>
+	        </div>
+    </header>
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="main">Main</a>
+        <a class="item" data-tab="description">Description</a>
+        <a class="item" data-tab="items">Talents & Gear</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+        {{!-- Main Tab --}}
+
+        <div class="tab main" data-group="primary" data-tab="main">
+            <div class="player-main">
+                <div class="abilities">
+                    {{#each actor.data.abilities }}
+                    <div class="ability">
+                        <input name="data.abilities.{{@key}}" type="text" value="{{this}}" data-dtype="Number" />
+                        <input name="data.abilities.{{@key}}.max" type="text" value="{{this.max}}" data-dtype="Number" />
+                        <label for="data.abilities.{{@key}}">{{@key}}</label>
+                        <a class="rollable big-die" data-ability="{{@key}}"><i class="fas fa-dice"></i></a>
+                    </div>
+                    {{/each}}
+                </div>
+
+                <div class="content">
+                    <div class="stat-row">
+                        <div class="prop">
+                            <input name="data.defense" type="text" value="{{data.defense}}"
+                                   placeholder="Defense" data-dtype="Number" />
+                            <label for="data.defense">Defense</label>
+                        </div>
+						<div class="prop">
+                            <input name="data.toughness" type="text" readonly value="{{data.abilities.Constitution}}"
+                                placeholder="Toughness" data-dtype="Number" />
+                            <label for="data.toughness">Toughness</label>
+                        </div>
+                        <div class="prop">
+                            <input name="data.armorRating" type="text" readonly value="{{data.armorRating}}"
+                                placeholder="Armor Rating" data-dtype="Number" />
+                            <label for="data.armorRating">Armor Score</label>
+                        </div>
+                        <div class="prop">
+                            <input name="data.armorPenalty" type="text" readonly value="{{data.armorPenalty}}"
+                                placeholder="Armor Penalty" data-dtype="number" />
+                            <label for="data.armorPenalty">Armor Penalty</label>
+                        </div>
+                    </div>
+                    <div class="stat-row">
+                        <div class="prop">
+                            <input name="data.speed" type="text" value="{{data.speed}}" placeholder="Speed"
+                                data-dtype="Number" />
+                            <label for="data.speed">Speed</label>
+                        </div>
+											<div class="prop">
+                            <input name="data.level" type="text" value="{{data.level}}" data-dtype="number" />
+                            <label for="data.level">Level</label>
+                        </div>
+												<div class="prop">
+                            <input name="data.experience" type="text" value="{{data.experience}}" data-dtype="number" />
+                            <label for="data.experience">Experience</label>
+                        </div>
+												<div class="prop">
+                            <input name="data.income" type="text" value="{{data.income}}" data-dtype="number" />
+                            <label for="data.income">Income</label>
+                        </div>
+					
+					
+					
+                    </div>
+                    <div class="stat-row">
+
+                        <div class="prop wide">
+                            <div class="resource">
+                                <input name="data.fortune.value" type="text" value="{{data.fortune.value}}"
+                                    data-dtype="Number" />
+                                <span>/</span>
+                                <input name="data.fortune.max" type="text" value="{{data.fortune.max}}"
+                                    data-dtype="Number" />
+                            </div>
+                            <label>Fortune</label>
+                        </div>
+						<div class="prop wide">
+							<input name="data.condition" type="text" value="{{data.condition}}" placeholder="Conditions"
+								data-dtype="String" />
+							<label for="data.condition">Conditions</label>
+						</div>
+                    </div>
+						<div class="wide-section">
+                        <h3>Focuses</h3>
+                        <ol class="item-list">
+                            {{#each itemGroups.focuses as |item id|}}
+                            <li class="item" data-item-id="{{item._id}}">
+                                <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+                                <h4 class="item-name">{{item.name}}</h4>
+                                <div class="item-controls">
+                                    <a class="rollable small-die" title="Roll" data-item-id="{{item._id}}">
+                                        <i class="fas fa-dice"></i>
+                                    </a>
+                                    <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                                    <a class="item-control item-delete" title="Delete Item"><i
+                                            class="fas fa-trash"></i></a>
+                                </div>
+                            </li>
+                            {{/each}}
+                        </ol>
+                    </div>
+                    <div class="wide-section">
+                        <h3>Weapons</h3>
+                        <ol class="item-list">
+                            {{#each itemGroups.actions as |item id|}}
+                            <li class="item" data-item-id="{{item._id}}">
+                                <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+                                <h4 class="item-name">{{item.name}}</h4>
+                                <div class="item-controls">
+                                    <a class="rollable small-die" title="To Hit" data-item-id="{{item._id}}">
+                                        <i class="fas fa-bullseye"></i>
+                                    </a>
+                                    <a class="rollDam small-die" title="Damage" data-item-id="{{item._id}}">
+                                        <i class="fas fa-skull-crossbones"></i>
+                                    </a>
+                                    <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                                    <a class="item-control item-delete" title="Delete Item"><i
+                                            class="fas fa-trash"></i></a>
+                                </div>
+                            </li>
+                            {{/each}}
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{!-- Biography Tab --}}
+        <div class="tab biography" data-group="primary" data-tab="description">
+            <div class="wide-section">
+                <h3>Persona</h3>
+                <div class="entry">
+                    <label>Origin</label>
+                    <input class="lined" name="data.persona.origin" type="text" data-dtype="string"
+                        value="{{data.persona.origin}}" />
+                </div>
+                <div class="entry">
+                    <label>Social Class</label>
+                    <input class="lined" name="data.persona.class" type="text" data-dtype="string"
+                        value="{{data.persona.class}}" />
+                </div>
+                <div class="entry">
+                    <label>Background</label>
+                    <input class="lined" name="data.persona.background" type="text" data-dtype="string"
+                        value="{{data.persona.background}}" />
+                </div>
+                <div class="entry">
+                    <label>Profession</label>
+                    <input class="lined" name="data.persona.profession" type="text" data-dtype="string"
+                        value="{{data.persona.profession}}" />
+                </div>
+                <div class="entry">
+                    <label>Drive</label>
+                    <input class="lined" name="data.persona.drive" type="text" data-dtype="string"
+                        value="{{data.persona.drive}}" />
+                </div>
+                <div class="entry">
+                    <label>Goals</label>
+                    <div class="list">
+                        {{#each data.persona.goals}}
+                        <input class="lined" name="data.persona.goals.{{@key}}" type="text" data-dtype="string"
+                            value="{{this}}" />
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <div class="wide-section">
+                <h3>Relationships</h3>
+                <div class="relationship-table">
+                    <h4>Name</h4>
+                    <h4>Intensity</h4>
+                    <h4>Relationship Bond</h4>
+                    <h4></h4>
+                    {{#each data.relationships}}
+                    <input class="relationship lined" name="data.relationships.{{@key}}.name" type="text"
+                        data-dtype="string" value="{{this.name}}" />
+                    <input class="relationship lined" name="data.relationships.{{@key}}.intensity" type="text"
+                        data-dtype="number" value="{{this.intensity}}" />
+                    <input class="relationship lined" name="data.relationships.{{@key}}.bond" type="text"
+                        data-dtype="string" value="{{this.bond}}" />
+                    <a class="relationship-delete" name="data.relationships.{{@key}}.delete" title="Remove Relationship"
+                        data-action="remove" data-index="{{@key}}"><i class="fas fa-trash"></i></a>
+                    {{/each}}
+                    <a class="relationship-add" title="Add Relationship" data-action="add">
+                        <i class="fas fa-plus"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="wide-section">
+                <h3>Character Notes</h3>
+                {{editor content=data.notes target="data.notes" button=true owner=owner editable=editable}}
+            </div>
+        </div>
+
+        {{!-- Owned Items Tab --}}
+        <div class="tab items" data-group="primary" data-tab="items">
+            <div class="wide-section">
+                <h3>Talents & Specializations</h3>
+                <ol class="item-list">
+                    {{#each itemGroups.talents as |item id|}}
+                    <li class="item" data-item-id="{{item._id}}">
+                        <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+                        <h4 class="item-name">{{item.name}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
+            <div class="wide-section">
+                <h3>Gear</h3>
+                <ol class="item-list">
+                    {{#each itemGroups.gear as |item id|}}
+                    <li class="item" data-item-id="{{item._id}}">
+                        <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+                        <h4 class="item-name">{{item.name}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
+        </div>
+    </section>
+</form>

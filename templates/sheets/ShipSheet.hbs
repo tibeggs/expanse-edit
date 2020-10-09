@@ -1,0 +1,58 @@
+<form class="{{cssClass}}" autocomplete="off">
+    {{!-- Sheet Header --}}
+    <header class="sheet-header">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+        <h1 class="name prop">
+            <input name="name" type="text" value="{{actor.name}}" placeholder="Name" />
+            <label for="name">Name</label>
+        </h1>
+		<div class="sub-header">
+			<div class="prop">
+				<input type="text" name="data.description" value="{{data.description}}" placeholder="Description" />
+				<label for="data.description">Description</label>
+			</div>
+		</div>
+	</header>
+    <section class="sheet-body">
+		<div class="stat-row">
+            <div class="prop">
+                <input type="text" name="data.size" value="{{data.size}}" data-dtype="number" />
+                <label for="data.size">Size</label>
+            </div>
+            <div class="prop">
+                <input type="text" name="data.drive" value="{{data.drive}}" data-dtype="number" />
+                <label for="data.drive">Drive</label>
+            </div>
+			<div class="prop">
+				<input name="data.competence" type="text" value="{{data.competence}}" />
+				<label for="data.competence">Crew Competence</label>
+			</div>
+		</div>
+		<div class="stat-row">
+			<div class="prop">
+				<input name="data.sensors" type="text" value="{{data.sensors}}" />
+				<label for="data.sensors">Sensors</label>
+			</div>
+			<div class="prop">
+				<input name="data.hull" type="text" value="{{data.hull}}" />
+				<label for="data.hull">Hull</label>
+			</div>
+			<div class="prop">
+				<input name="data.crew" type="text" value="{{data.crew}}" />
+				<label for="data.crew">Crew</label>
+			</div>
+		</div>	
+		<div class="wide-section">
+			<h3>Qualities</h3>
+			{{editor content=data.quality target="data.quality" button=true owner=owner editable=editable}}
+		</div>
+		<div class="wide-section">
+			<h3>Flaws</h3>
+			{{editor content=data.flaw target="data.flaw" button=true owner=owner editable=editable}}
+		</div>
+		<div class="wide-section">
+			<h3>Weapons</h3>
+			{{editor content=data.weapon target="data.weapon" button=true owner=owner editable=editable}}
+		</div>
+	</section>
+</form>

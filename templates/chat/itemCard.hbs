@@ -1,0 +1,12 @@
+<div class="the-expanse chat-card" data-actor-id="{{actor._id}}" data-item-id="{{item._id}}"
+    {{#if tokenId}}data-token-id="{{tokenId}}" {{/if}}>
+    <header class="card-header">
+        <img src="{{item.img}}" title="{{item.name}}" width="36" height="36" />
+        <h3>{{item.name}}</h3>
+    </header>
+    <div class="card-content">{{data.description.value}}</div>
+    <div class="card-buttons">
+        {{#if isWeapon}}<button data-action="attack">Attack</button>{{/if}}
+        {{#if isWeapon}}<button data-action="damage">Damage</button>{{/if}}
+    </div>
+</div>

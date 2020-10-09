@@ -1,0 +1,31 @@
+{
+	"name": "the-expanse-tim",
+	"title": "The Expanse Tim Edit",
+	"description": "my edits for The Expanse bsed on work by The GrandPickle",
+	"version": "1.0",
+	"author": "me",
+	"scripts": [],
+	"esmodules": ["the-expanse.js"],
+	"styles": ["the-expanse.css"],
+	"packs": [
+		{
+			"entity": "Macro",
+			"name": "Macros",
+			"label": "Macros",
+			"system": "the-expanse",
+			"path": "./packs/macros.db"
+		}
+	],
+	"languages": [],
+	"gridDistance": 1,
+	"gridUnits": "m",
+	"minimumCoreVersion": "0.5.0",
+	"compatibleCoreVersion": "",
+	"url": "https://gitlab.com/TheGrandPickle/the-expanse",
+	"manifest": "https://gitlab.com/TheGrandPickle/the-expanse/-/blob/master/system.json",
+	"download": "https://gitlab.com/TheGrandPickle/the-expanse/-/archive/master/the-expanse-master.zip",
+	"license": "https://gitlab.com/TheGrandPickle/the-expanse/-/blob/master/license.adoc",
+	"readme": "https://gitlab.com/TheGrandPickle/the-expanse/-/blob/master/readme.adoc",
+	"bugs": "https://gitlab.com/TheGrandPickle/the-expanse/-/blob/master/issues",
+	"changelog": ""
+}
