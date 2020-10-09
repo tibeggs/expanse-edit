@@ -2,7 +2,7 @@
 	"name": "the-expanse-tim",
 	"title": "The Expanse Tim Edit",
 	"description": "my edits for The Expanse bsed on work by The GrandPickle",
-	"version": "1.0",
+	"version": "2.0",
 	"author": "me",
 	"scripts": [],
 	"esmodules": [ "the-expanse-tim.js" ],
