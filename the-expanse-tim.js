@@ -19,7 +19,7 @@ import { _getInitiativeFormula } from "./module/rolls/combat.js";
 /* Initialize system					*/
 /* ------------------------------------ */
 Hooks.once("init", async function () {
-    console.log("the-expanse | Initializing the-expanse");
+    console.log("the-expanse-tim | Initializing he-expanse-tim");
     // Assign custom classes and constants here
     // Register custom system settings
     registerSettings();
@@ -27,15 +27,15 @@ Hooks.once("init", async function () {
     await preloadTemplates();
     // Register custom sheets
     Actors.unregisterSheet("core", ActorSheet);
-	Actors.registerSheet("the-expanse", PlayerCharacterSheet, { types: [playerCharacterType], makeDefault: true });
-    Actors.registerSheet("the-expanse", ShipSheet, { types: [shipType], makeDefault: true });
+    Actors.registerSheet("the-expanse-tim", PlayerCharacterSheet, { types: [playerCharacterType], makeDefault: true });
+    Actors.registerSheet("the-expanse-tim", ShipSheet, { types: [shipType], makeDefault: true });
     Items.unregisterSheet("core", ItemSheet);
-    Items.registerSheet("the-expanse", FocusSheet, { types: [focusType], makeDefault: true });
-    Items.registerSheet("the-expanse", WeaponSheet, { types: [weaponType], makeDefault: true });
-    Items.registerSheet("the-expanse", ArmorSheet, { types: [armorType], makeDefault: true });
-    Items.registerSheet("the-expanse", ShieldSheet, { types: [shieldType], makeDefault: true });
-    Items.registerSheet("the-expanse", PhysicalItemSheet, { types: [physicalItemType], makeDefault: true });
-    Items.registerSheet("the-expanse", TalentSheet, { types: [talentType], makeDefault: true });
+    Items.registerSheet("the-expanse-tim", FocusSheet, { types: [focusType], makeDefault: true });
+    Items.registerSheet("the-expanse-tim", WeaponSheet, { types: [weaponType], makeDefault: true });
+    Items.registerSheet("the-expanse-tim", ArmorSheet, { types: [armorType], makeDefault: true });
+    Items.registerSheet("the-expanse-tim", ShieldSheet, { types: [shieldType], makeDefault: true });
+    Items.registerSheet("the-expanse-tim", PhysicalItemSheet, { types: [physicalItemType], makeDefault: true });
+    Items.registerSheet("the-expanse-tim", TalentSheet, { types: [talentType], makeDefault: true });
 	// Register custom rolls
 	game.expanse = {
 		AgeRoll,
@@ -51,7 +51,7 @@ Hooks.once("init", async function () {
   Combat.prototype._getInitiativeFormula = _getInitiativeFormula;
 
   // Register system settings
-  game.settings.register('expanse', 'macroShorthand', {
+  game.settings.register('expanse-tim', 'macroShorthand', {
     name: 'Shortened Macro Syntax',
     hint:
       'Enable a shortened macro syntax which allows referencing attributes directly, for example @str instead of @attributes.str.value. Disable this setting if you need the ability to reference the full attribute model, for example @attributes.str.label.',
