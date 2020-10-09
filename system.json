@@ -12,12 +12,12 @@
 			"entity": "Macro",
 			"name": "Macros",
 			"label": "Macros",
-			"system": "the-expanse",
+			"system": "the-expanse-tim",
 			"path": "./packs/macros.db"
 		}
 	],
 	"languages": [],
-	"gridDistance": 1,
+	"gridDistance": 2,
 	"gridUnits": "m",
 	"minimumCoreVersion": "0.5.0",
 	"compatibleCoreVersion": "",
