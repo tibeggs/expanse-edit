@@ -5,8 +5,8 @@
 	"version": "1.0",
 	"author": "me",
 	"scripts": [],
-	"esmodules": [ "the-expanse.js" ],
-	"styles": [ "the-expanse.css" ],
+	"esmodules": [ "the-expanse-tim.js" ],
+	"styles": [ "the-expanse-tim.css" ],
 	"packs": [
 		{
 			"entity": "Macro",
