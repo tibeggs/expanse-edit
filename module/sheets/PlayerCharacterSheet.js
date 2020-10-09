@@ -16,7 +16,7 @@ export class PlayerCharacterSheet extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["the-expanse-tim", "sheet", "player-character", playerCharacterType],
-            template: "systems/the-expanse/templates/sheets/playerCharacterSheet.hbs",
+            template: "systems/the-expanse-tim/templates/sheets/playerCharacterSheet.hbs",
             width: 600,
             height: 600,
             tabs: [

@@ -9,7 +9,7 @@ export class ShipSheet extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["the-expanse-tim", "sheet", "ship", shipType],
-            template: "systems/the-expanse/templates/sheets/ShipSheet.hbs",
+            template: "systems/the-expanse-tim/templates/sheets/ShipSheet.hbs",
             width: 600,
             height: 600,
         });

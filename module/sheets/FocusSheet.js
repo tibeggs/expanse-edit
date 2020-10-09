@@ -3,7 +3,7 @@ export class FocusSheet extends ItemSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["the-expanse-tim", "sheet", focusType],
-            template: "systems/the-expanse/templates/sheets/focusSheet.html",
+            template: "systems/the-expanse-tim/templates/sheets/focusSheet.html",
             width: 520,
             height: 250,
         });

@@ -3,7 +3,7 @@ export class ShieldSheet extends ItemSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["the-expanse-tim", "sheet", shieldType],
-            template: "systems/the-expanse/templates/sheets/shieldSheet.html",
+            template: "systems/the-expanse-tim/templates/sheets/shieldSheet.html",
             width: 520,
             height: 250,
         });
