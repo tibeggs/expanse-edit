@@ -2,7 +2,7 @@ import { weaponType } from "../data/Item/ItemTypes.js";
 export class WeaponSheet extends ItemSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            classes: ["the-expanse", "sheet", weaponType],
+            classes: ["the-expanse-tim", "sheet", weaponType],
             template: "systems/the-expanse/templates/sheets/weaponSheet.hbs",
             width: 520,
             height: 300,

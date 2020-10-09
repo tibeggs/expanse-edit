@@ -2,7 +2,7 @@ import { focusType } from "../data/Item/ItemTypes.js";
 export class FocusSheet extends ItemSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            classes: ["the-expanse", "sheet", focusType],
+            classes: ["the-expanse-tim", "sheet", focusType],
             template: "systems/the-expanse/templates/sheets/focusSheet.html",
             width: 520,
             height: 250,

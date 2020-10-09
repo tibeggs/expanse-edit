@@ -8,7 +8,7 @@ export class ShipSheet extends ActorSheet {
     /** @override */
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            classes: ["the-expanse", "sheet", "ship", shipType],
+            classes: ["the-expanse-tim", "sheet", "ship", shipType],
             template: "systems/the-expanse/templates/sheets/ShipSheet.hbs",
             width: 600,
             height: 600,

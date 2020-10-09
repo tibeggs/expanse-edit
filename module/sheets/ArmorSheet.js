@@ -2,7 +2,7 @@ import { armorType } from "../data/Item/ItemTypes.js";
 export class ArmorSheet extends ItemSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            classes: ["the-expanse", "sheet", armorType],
+            classes: ["the-expanse-tim", "sheet", armorType],
             template: "systems/the-expanse/templates/sheets/armorSheet.html",
             width: 520,
             height: 250,

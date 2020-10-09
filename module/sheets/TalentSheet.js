@@ -2,7 +2,7 @@ import { talentType } from "../data/Item/ItemTypes.js";
 export class TalentSheet extends ItemSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            classes: ["the-expanse", "sheet", talentType],
+            classes: ["the-expanse-tim", "sheet", talentType],
             template: "systems/the-expanse/templates/sheets/talentSheet.html",
             width: 520,
             height: 250,

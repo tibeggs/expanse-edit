@@ -2,7 +2,7 @@ import { physicalItemType } from "../data/Item/ItemTypes.js";
 export class PhysicalItemSheet extends ItemSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            classes: ["the-expanse", "sheet", physicalItemType],
+            classes: ["the-expanse-tim", "sheet", physicalItemType],
             template: "systems/the-expanse/templates/sheets/physicalItemSheet.html",
             width: 520,
             height: 250,
