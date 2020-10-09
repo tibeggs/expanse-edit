@@ -2,59 +2,59 @@
 /*				   Less					*/
 /* This is your Less entry file			*/
 /* ------------------------------------ */
-.the-expanse .window-content {
+.the-expanse-tim .window-content {
   height: 100%;
   padding: 5px;
   overflow-y: hidden;
   background-image: url("./assets/sheet-background.png");
 }
-.the-expanse .sheet-header {
+.the-expanse-tim .sheet-header {
   display: grid;
   grid-template-columns: 100px 1fr;
   grid-template-rows: 58px 42px;
   grid-template-areas: "profile name" "profile sub";
 }
-.the-expanse .sheet-header .profile-img {
+.the-expanse-tim .sheet-header .profile-img {
   height: 100%;
   width: 100%;
   grid-area: profile;
   border: 2px black solid;
 }
-.the-expanse .sheet-header .name {
+.the-expanse-tim .sheet-header .name {
   grid-area: name;
 }
-.the-expanse .sheet-header .sub-header {
+.the-expanse-tim .sheet-header .sub-header {
   grid-area: sub;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
-.the-expanse .sheet-tabs {
+.the-expanse-tim .sheet-tabs {
   margin: 4px;
   margin-bottom: 0;
 }
-.the-expanse .sheet-tabs .item {
+.the-expanse-tim .sheet-tabs .item {
   margin: 0px 2%;
   background-color: #4a4d66;
   color: white;
 }
-.the-expanse .sheet-tabs .item.active {
+.the-expanse-tim .sheet-tabs .item.active {
   background-color: #8f95c7;
   text-shadow: none;
 }
-.the-expanse .sheet-body {
+.the-expanse-tim .sheet-body {
   padding: 10px;
   margin: 0 5px;
   overflow: auto;
 }
-.the-expanse .sheet-body .stat-row {
+.the-expanse-tim .sheet-body .stat-row {
   display: flex;
   flex-wrap: nowrap;
   padding: 0 3px;
 }
 
-.the-expanse .sheet-body .wide-section {
+.the-expanse-tim .sheet-body .wide-section {
   margin: 5px;
   background-color: #333547;
   display: flex;
@@ -62,45 +62,45 @@
   padding: 3px;
 }
 
-.the-expanse .sheet-body .wide-section h3 {
+.the-expanse-tim .sheet-body .wide-section h3 {
   color: white;
   text-align: center;
   margin: 0;
 }
-.the-expanse .sheet-body .wide-section ol {
+.the-expanse-tim .sheet-body .wide-section ol {
   background: white;
   min-height: 30px;
   margin: 0;
 }
-.the-expanse .sheet-body .wide-section .editor {
+.the-expanse-tim .sheet-body .wide-section .editor {
   padding: 4px;
   flex-grow: 2;
   flex-basis: 40px;
   flex-shrink: 0;
   background: white;
 }
-.the-expanse .sheet-body .wide-section .editor .tox {
+.the-expanse-tim .sheet-body .wide-section .editor .tox {
   height: 400px !important;
 }
-.the-expanse .sheet-body .wide-section .entry {
+.the-expanse-tim .sheet-body .wide-section .entry {
   display: flex;
   flex-flow: row nowrap;
   background: white;
   align-items: baseline;
   padding: 2px;
 }
-.the-expanse .sheet-body .wide-section .entry label {
+.the-expanse-tim .sheet-body .wide-section .entry label {
   padding: 0 4px;
   flex-basis: content;
   color: black;
 }
-.the-expanse .sheet-body .item-list {
+.the-expanse-tim .sheet-body .item-list {
   list-style: none;
   margin: 7px 0;
   padding: 0;
   overflow-y: auto;
 }
-.the-expanse .sheet-body .item-list .item {
+.the-expanse-tim .sheet-body .item-list .item {
   height: 30px;
   line-height: 24px;
   padding: 3px;
@@ -108,19 +108,19 @@
   flex-flow: row nowrap;
   border-bottom: 1px solid #bbb;
 }
-.the-expanse .sheet-body .item-list .item img {
+.the-expanse-tim .sheet-body .item-list .item img {
   flex: 0 0 24px;
   margin-right: 5px;
 }
-.the-expanse .sheet-body .item-list .item-name {
+.the-expanse-tim .sheet-body .item-list .item-name {
   margin: 0;
   flex-grow: 1;
 }
-.the-expanse label {
+.the-expanse-tim label {
   padding: 0;
   color: white;
 }
-.the-expanse .prop {
+.the-expanse-tim .prop {
   background-color: #333547;
   text-align: center;
   margin: 2px !important;
@@ -128,7 +128,7 @@
   flex-grow: 1;
   flex-basis: 0%;
 }
-.the-expanse .prop input {
+.the-expanse-tim .prop input {
   height: 22px;
   width: 100%;
   border: none;
@@ -136,7 +136,7 @@
   background-color: white;
   margin: 0;
 }
-.the-expanse .prop select {
+.the-expanse-tim .prop select {
   height: 22px;
   width: 100%;
   border: none;
@@ -144,13 +144,13 @@
   background-color: white;
   margin: 0;
 }
-.the-expanse .prop label {
+.the-expanse-tim .prop label {
   margin: 0 auto;
   padding: 0;
   font-size: x-small;
   display: block;
 }
-.the-expanse .check-prop {
+.the-expanse-tim .check-prop {
   background-color: #333547;
   margin: 2px !important;
   padding: 5px;
@@ -159,50 +159,50 @@
   flex-shrink: 1;
   justify-items: center;
 }
-.the-expanse .check-prop label {
+.the-expanse-tim .check-prop label {
   padding-top: 4px;
 }
-.the-expanse .prop.wide {
+.the-expanse-tim .prop.wide {
   flex-grow: 2;
 }
-.the-expanse .resource {
+.the-expanse-tim .resource {
   display: flex;
   flex-wrap: nowrap;
 }
-.the-expanse .resource input {
+.the-expanse-tim .resource input {
   flex-shrink: 1;
 }
-.the-expanse .resource span {
+.the-expanse-tim .resource span {
   padding: 0 4px;
 }
-.the-expanse h1.prop {
+.the-expanse-tim h1.prop {
   border: none;
 }
-.the-expanse h1.prop input {
+.the-expanse-tim h1.prop input {
   height: 28px;
   margin: 0;
 }
-.the-expanse h1.prop label {
+.the-expanse-tim h1.prop label {
   font-size: medium;
 }
-.the-expanse .rollable.small-die {
+.the-expanse-tim .rollable.small-die {
   font-size: small;
   color: black;
 }
-.the-expanse .rollDam.small-die {
+.the-expanse-tim .rollDam.small-die {
   font-size: small;
   color: black;
 }
-.the-expanse .rollable.big-die {
+.the-expanse-tim .rollable.big-die {
   font-size: x-large;
   float: right;
   color: white;
 }
-.the-expanse.sheet.actor {
+.the-expanse-tim.sheet.actor {
   min-width: 560px;
   min-height: 420px;
 }
-.the-expanse.sheet.item {
+.the-expanse-tim.sheet.item {
   min-width: 460px;
   min-height: 400px;
 }
