@@ -90,7 +90,47 @@ export class PlayerCharacterSheet extends ActorSheet {
                     content: content,
                 });
             });
-		});
+        });
+        html.find(".rollable2").click((ev) => {
+            let target = $(ev.currentTarget).data();
+            let ability = target.ability;
+            let focus = target.focus;
+            let focusd = focus
+            if (target.itemId) {
+                let item = this.actor.items.get(target.itemId);
+                ability = item.data.data.defaultAbility;
+                switch (item.data.type) {
+                    case focusType:
+                        focus = item.name;
+                        focusd = item.data.data.description
+                        break;
+                    case weaponType:
+                        console.log("weapon");
+                        focus = item.data.name;
+                        focusd = item.data.data.description
+                        break;
+                    case talentType:
+                        console.log("talent");
+                        focus = item.data.name;
+                        focusd = item.data.data.description
+                        break;
+                    default:
+                        console.log("Other");
+                        focus = item.data.name;
+                        focusd = item.data.data.description
+                        break;
+                }
+                console.log(item);
+                console.log(focus);
+                console.log(focusd);
+            }
+            ChatMessage.create({
+                user: game.user._id, speaker:
+                ChatMessage.getSpeaker({ actor: target }),
+                flavor: focus+" Description",
+                content: focusd+" "
+            });
+        });
 		
 }
 

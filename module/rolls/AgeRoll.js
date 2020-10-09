@@ -21,7 +21,7 @@ export class AgeRoll extends Roll {
         chatOptions = mergeObject({
             user: game.user._id,
             flavor: null,
-            template: "systems/the-expanse/templates/chat/ageRoll.hbs",
+            template: "systems/the-expanse-tim/templates/chat/ageRoll.hbs",
         }, chatOptions || {});
         if (!this._rolled) {
             this.roll();

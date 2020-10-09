@@ -116,6 +116,10 @@
   margin: 0;
   flex-grow: 1;
 }
+.the-expanse-tim .sheet-body .item-list .item-desc {
+    margin: 0;
+    flex-grow: 2;
+}
 .the-expanse-tim label {
   padding: 0;
   color: white;
