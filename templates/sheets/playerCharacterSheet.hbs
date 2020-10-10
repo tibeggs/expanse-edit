@@ -69,7 +69,6 @@
                     </div>
                     {{/each}}
                 </div>
-
                 <div class="content">
                     <div class="stat-row">
                         <div class="prop">
@@ -78,17 +77,17 @@
                             <label for="data.defense">Defense</label>
                         </div>
 						<div class="prop">
-                            <input name="data.toughness" type="text" readonly value="{{data.abilities.Constitution}}"
+                            <input class="readonlyt" name="data.toughness" type="text" readonly value="{{data.abilities.Constitution}}"
                                 placeholder="Toughness" data-dtype="Number" />
                             <label for="data.toughness">Toughness</label>
                         </div>
                         <div class="prop">
-                            <input name="data.armorRating" type="text" readonly value="{{data.armorRating}}"
+                            <input class="readonlyar" name="data.armorRating" type="text" readonly value="{{data.armorRating}}"
                                 placeholder="Armor Rating" data-dtype="Number" />
                             <label for="data.armorRating">Armor Score</label>
                         </div>
                         <div class="prop">
-                            <input name="data.armorPenalty" type="text" readonly value="{{data.armorPenalty}}"
+                            <input class="readonlyap" name="data.armorPenalty" type="text" readonly value="{{data.armorPenalty}}"
                                 placeholder="Armor Penalty" data-dtype="number" />
                             <label for="data.armorPenalty">Armor Penalty</label>
                         </div>

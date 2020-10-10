@@ -41,6 +41,29 @@ export class PlayerCharacterSheet extends ActorSheet {
             const item = this.actor.getOwnedItem(li.data("itemId"));
             item.sheet.render(true);
         });
+        // update base data for item
+
+        var target1 = document.querySelector(".readonlyt")
+        this.actor.data.data.toughness = parseInt(target1.value);
+        var target2 = document.querySelector(".readonlyar")
+        this.actor.data.data.armorRating = parseInt(target2.value);
+        var target3 = document.querySelector(".readonlyap")
+        this.actor.data.data.armorPenalty = parseInt(target3.value);
+        // create an observer instance
+        //var observer = new MutationObserver(function (mutations) {
+        //    console.log("Mutation");
+        //});
+        //// configuration of the observer:
+        //var config = { attributes: true, childList: true, characterData: true, subtree: true };
+        //// pass in the target node, as well as the observer options
+        //observer.observe(target, config);
+
+        //html.find(".readonly").click((ev) => {
+        //    console.log("poo");
+        //    console.log($(ev.currentTarget)[0].value);
+        //    console.log($(ev.currentTarget));
+        //    this.actor.data.data.toughness = parseInt($(ev.currentTarget)[0].value);
+        //});
         // Delete Inventory Item
         html.find(".item-delete").click((ev) => {
             const li = $(ev.currentTarget).parents(".item");
