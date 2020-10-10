@@ -153,6 +153,9 @@
                                     </a>
                                 </div>
                             </li>
+                            <div class="item-content">
+                                {{{item.data.description}}}
+                            </div>
                             {{/each}}
                         </ol>
                     </div>
@@ -179,6 +182,9 @@
                                     </a>
                                 </div>
                             </li>
+                            <div class="item-content">
+                                {{{item.data.description}}}
+                            </div>
                             {{/each}}
                         </ol>
                     </div>
@@ -252,7 +258,22 @@
                 {{editor content=data.notes target="data.notes" button=true owner=owner editable=editable}}
             </div>
         </div>
+        <script>
+            var coll = document.getElementsByClassName("item-name");
+            var i;
 
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.parentElement.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
         {{!-- Owned Items Tab --}}
         <div class="tab items" data-group="primary" data-tab="items">
             <div class="wide-section">
@@ -269,7 +290,11 @@
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                         </div>
+
                     </li>
+                    <div class="item-content">
+                        {{{item.data.description}}}
+                    </div>
                     {{/each}}
                 </ol>
             </div>
@@ -288,6 +313,9 @@
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                         </div>
                     </li>
+                    <div class="item-content">
+                        {{{item.data.description}}}
+                    </div>
                     {{/each}}
                 </ol>
             </div>

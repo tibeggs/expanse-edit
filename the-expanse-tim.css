@@ -39,6 +39,21 @@
   background-color: #4a4d66;
   color: white;
 }
+.the-expanse-tim .sheet-body .item-list .item-collapsible {
+    height: 30px;
+    line-height: 24px;
+    padding: 3px;
+    display: flex;
+    flex-flow: row nowrap;
+    border-bottom: 1px solid #bbb;
+}
+.the-expanse-tim .sheet-body .item-list .item-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
 .the-expanse-tim .sheet-tabs .item.active {
   background-color: #8f95c7;
   text-shadow: none;
@@ -107,6 +122,10 @@
   display: flex;
   flex-flow: row nowrap;
   border-bottom: 1px solid #bbb;
+}
+.the-expanse-tim .sheet-body .item-list .item-collapsible img {
+    flex: 0 0 24px;
+    margin-right: 5px;
 }
 .the-expanse-tim .sheet-body .item-list .item img {
   flex: 0 0 24px;
