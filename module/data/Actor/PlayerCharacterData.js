@@ -1,5 +1,6 @@
 import { playerCharacterType } from "./ActorTypes.js";
 import { defaultAbilities } from "./shared/Abilities.js";
+import { hAbilities } from "./shared/AbilitiesHold.js";
 import { defaultPersona } from "./shared/Persona.js";
 export const emptyPlayerCharacter = {
 	type: playerCharacterType,
@@ -9,6 +10,7 @@ export const emptyPlayerCharacter = {
 	profession: "",
 	drive: "",
     abilities: defaultAbilities,
+    holdabilities: hAbilities,
     fortune: { max: 20, value: 20, min: 0 },
     level: 0,
 	income: 0,
@@ -17,7 +19,6 @@ export const emptyPlayerCharacter = {
     speed: 10,
     defense: 10,
     toughness: 0,
-    poop: 99,
     armorRating: 0,
     armorPenalty: 0,
     persona: defaultPersona,

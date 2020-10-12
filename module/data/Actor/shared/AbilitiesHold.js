@@ -1,4 +1,4 @@
-export const defaultAbilities = {
+export const hAbilities = {
     Accuracy: 0,
     Communication: 0,
     Constitution: 0,

@@ -7,43 +7,43 @@
             <label for="name">Name</label>
         </h1>
         <div class="sub-header">
-			<div class="origin prop">
-					<select name="data.origin" data-dtype="string">
-						{{#select data.origin}}
-						<option value="0">None</option>
-						<option value="1">Earth</option>
-						<option value="2">Mars</option>
-						<option value="3">Belt</option>
-						{{/select}}
-					</select>
-					<label for="data.origin">Origin</label>
-				</div>
-				<div class="class prop">
-					<select name="data.class" data-dtype="String" >
-						{{#select data.class}}
-						<option value="0">None</option>
-						<option value="1">Outsider</option>
-						<option value="2">Lower Class</option>
-						<option value="3">Middle Class</option>
-						<option value="4">Upper Class</option>
-						{{/select}}
-					</select>
-					<label for="data.class">Social Class</label>
-				</div>
-				<div class="background prop">
-					<input name="data.background" type="text" value="{{data.background}}" placeholder="Background"
-						data-dtype="String" />
-					<label for="data.background">Background</label>
-				</div>
-				<div class="profession prop">
-					<input name="data.profession" type="text" value="{{data.profession}}" placeholder="Profession" data-dtype="String" />
-					<label for="data.profession">Profession</label>
-				</div>
-				<div class="drive prop">
-					<input name="data.drive" type="text" value="{{data.drive}}" placeholder="Drive" data-dtype="String" />
-					<label for="data.drive">Drive</label>
-				</div>
-	        </div>
+            <div class="origin prop">
+                <select name="data.origin" data-dtype="string">
+                    {{#select data.origin}}
+                    <option value="0">None</option>
+                    <option value="1">Earth</option>
+                    <option value="2">Mars</option>
+                    <option value="3">Belt</option>
+                    {{/select}}
+                </select>
+                <label for="data.origin">Origin</label>
+            </div>
+            <div class="class prop">
+                <select name="data.class" data-dtype="String">
+                    {{#select data.class}}
+                    <option value="0">None</option>
+                    <option value="1">Outsider</option>
+                    <option value="2">Lower Class</option>
+                    <option value="3">Middle Class</option>
+                    <option value="4">Upper Class</option>
+                    {{/select}}
+                </select>
+                <label for="data.class">Social Class</label>
+            </div>
+            <div class="background prop">
+                <input name="data.background" type="text" value="{{data.background}}" placeholder="Background"
+                       data-dtype="String" />
+                <label for="data.background">Background</label>
+            </div>
+            <div class="profession prop">
+                <input name="data.profession" type="text" value="{{data.profession}}" placeholder="Profession" data-dtype="String" />
+                <label for="data.profession">Profession</label>
+            </div>
+            <div class="drive prop">
+                <input name="data.drive" type="text" value="{{data.drive}}" placeholder="Drive" data-dtype="String" />
+                <label for="data.drive">Drive</label>
+            </div>
+        </div>
     </header>
 
     {{!-- Sheet Tab Navigation --}}
@@ -63,7 +63,8 @@
                     {{#each actor.data.abilities }}
                     <div class="ability">
                         <input name="data.abilities.{{@key}}" type="text" value="{{this}}" data-dtype="Number" />
-                        <input name="data.abilities.{{@key}}.max" type="text" value="{{this.max}}" data-dtype="Number" />
+                        <input name="data.holdabilities.{{@key}}" type="text" value="{{lookup ../data/holdabilities @key}}" data-dtype="Number" />
+
                         <label for="data.abilities.{{@key}}">{{@key}}</label>
                         <a class="rollable big-die" data-ability="{{@key}}"><i class="fas fa-dice"></i></a>
                     </div>
@@ -76,63 +77,63 @@
                                    placeholder="Defense" data-dtype="Number" />
                             <label for="data.defense">Defense</label>
                         </div>
-						<div class="prop">
+                        <div class="prop">
                             <input class="readonlyt" name="data.toughness" type="text" readonly value="{{data.abilities.Constitution}}"
-                                placeholder="Toughness" data-dtype="Number" />
+                                   placeholder="Toughness" data-dtype="Number" />
                             <label for="data.toughness">Toughness</label>
                         </div>
                         <div class="prop">
                             <input class="readonlyar" name="data.armorRating" type="text" readonly value="{{data.armorRating}}"
-                                placeholder="Armor Rating" data-dtype="Number" />
+                                   placeholder="Armor Rating" data-dtype="Number" />
                             <label for="data.armorRating">Armor Score</label>
                         </div>
                         <div class="prop">
                             <input class="readonlyap" name="data.armorPenalty" type="text" readonly value="{{data.armorPenalty}}"
-                                placeholder="Armor Penalty" data-dtype="number" />
+                                   placeholder="Armor Penalty" data-dtype="number" />
                             <label for="data.armorPenalty">Armor Penalty</label>
                         </div>
                     </div>
                     <div class="stat-row">
                         <div class="prop">
                             <input name="data.speed" type="text" value="{{data.speed}}" placeholder="Speed"
-                                data-dtype="Number" />
+                                   data-dtype="Number" />
                             <label for="data.speed">Speed</label>
                         </div>
-											<div class="prop">
+                        <div class="prop">
                             <input name="data.level" type="text" value="{{data.level}}" data-dtype="number" />
                             <label for="data.level">Level</label>
                         </div>
-												<div class="prop">
+                        <div class="prop">
                             <input name="data.experience" type="text" value="{{data.experience}}" data-dtype="number" />
                             <label for="data.experience">Experience</label>
                         </div>
-												<div class="prop">
+                        <div class="prop">
                             <input name="data.income" type="text" value="{{data.income}}" data-dtype="number" />
                             <label for="data.income">Income</label>
                         </div>
-					
-					
-					
+
+
+
                     </div>
                     <div class="stat-row">
 
                         <div class="prop wide">
                             <div class="resource">
                                 <input name="data.fortune.value" type="text" value="{{data.fortune.value}}"
-                                    data-dtype="Number" />
+                                       data-dtype="Number" />
                                 <span>/</span>
                                 <input name="data.fortune.max" type="text" value="{{data.fortune.max}}"
-                                    data-dtype="Number" />
+                                       data-dtype="Number" />
                             </div>
                             <label>Fortune</label>
                         </div>
-						<div class="prop wide">
-							<input name="data.condition" type="text" value="{{data.condition}}" placeholder="Conditions"
-								data-dtype="String" />
-							<label for="data.condition">Conditions</label>
-						</div>
+                        <div class="prop wide">
+                            <input name="data.condition" type="text" value="{{data.condition}}" placeholder="Conditions"
+                                   data-dtype="String" />
+                            <label for="data.condition">Conditions</label>
+                        </div>
                     </div>
-						<div class="wide-section">
+                    <div class="wide-section">
                         <h3>Focuses</h3>
                         <ol class="item-list">
                             {{#each itemGroups.focuses as |item id|}}
@@ -198,34 +199,34 @@
                 <div class="entry">
                     <label>Origin</label>
                     <input class="lined" name="data.persona.origin" type="text" data-dtype="string"
-                        value="{{data.persona.origin}}" />
+                           value="{{data.persona.origin}}" />
                 </div>
                 <div class="entry">
                     <label>Social Class</label>
                     <input class="lined" name="data.persona.class" type="text" data-dtype="string"
-                        value="{{data.persona.class}}" />
+                           value="{{data.persona.class}}" />
                 </div>
                 <div class="entry">
                     <label>Background</label>
                     <input class="lined" name="data.persona.background" type="text" data-dtype="string"
-                        value="{{data.persona.background}}" />
+                           value="{{data.persona.background}}" />
                 </div>
                 <div class="entry">
                     <label>Profession</label>
                     <input class="lined" name="data.persona.profession" type="text" data-dtype="string"
-                        value="{{data.persona.profession}}" />
+                           value="{{data.persona.profession}}" />
                 </div>
                 <div class="entry">
                     <label>Drive</label>
                     <input class="lined" name="data.persona.drive" type="text" data-dtype="string"
-                        value="{{data.persona.drive}}" />
+                           value="{{data.persona.drive}}" />
                 </div>
                 <div class="entry">
                     <label>Goals</label>
                     <div class="list">
                         {{#each data.persona.goals}}
                         <input class="lined" name="data.persona.goals.{{@key}}" type="text" data-dtype="string"
-                            value="{{this}}" />
+                               value="{{this}}" />
                         {{/each}}
                     </div>
                 </div>
@@ -239,13 +240,13 @@
                     <h4></h4>
                     {{#each data.relationships}}
                     <input class="relationship lined" name="data.relationships.{{@key}}.name" type="text"
-                        data-dtype="string" value="{{this.name}}" />
+                           data-dtype="string" value="{{this.name}}" />
                     <input class="relationship lined" name="data.relationships.{{@key}}.intensity" type="text"
-                        data-dtype="number" value="{{this.intensity}}" />
+                           data-dtype="number" value="{{this.intensity}}" />
                     <input class="relationship lined" name="data.relationships.{{@key}}.bond" type="text"
-                        data-dtype="string" value="{{this.bond}}" />
+                           data-dtype="string" value="{{this.bond}}" />
                     <a class="relationship-delete" name="data.relationships.{{@key}}.delete" title="Remove Relationship"
-                        data-action="remove" data-index="{{@key}}"><i class="fas fa-trash"></i></a>
+                       data-action="remove" data-index="{{@key}}"><i class="fas fa-trash"></i></a>
                     {{/each}}
                     <a class="relationship-add" title="Add Relationship" data-action="add">
                         <i class="fas fa-plus"></i>
