@@ -8,22 +8,22 @@
   overflow-y: hidden;
   background-image: url("./assets/sheet-background.png");
 }
-.the-expanse-tim .sheet-header {
+.the-expanse-tim .sheet-headerex {
   display: grid;
   grid-template-columns: 100px 1fr;
   grid-template-rows: 58px 42px;
   grid-template-areas: "profile name" "profile sub";
 }
-.the-expanse-tim .sheet-header .profile-img {
+.the-expanse-tim .sheet-headerex .profile-img {
   height: 100%;
   width: 100%;
   grid-area: profile;
   border: 2px black solid;
 }
-.the-expanse-tim .sheet-header .name {
+.the-expanse-tim .sheet-headerex .name {
   grid-area: name;
 }
-.the-expanse-tim .sheet-header .sub-header {
+.the-expanse-tim .sheet-headerex .sub-header {
   grid-area: sub;
   display: flex;
   flex-direction: row;
