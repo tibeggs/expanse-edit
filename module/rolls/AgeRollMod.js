@@ -41,9 +41,11 @@ export class AgeRollMod extends Roll {
             total: this.total,
             stuntPoints: match ? rolls[2] : 0,
         };
+        console.log(chatData);
         return renderTemplate(chatOptions.template, chatData);
     }
     async toMessage(chatData) {
+        console.log("here");
         chatData.content = await this.render({ user: chatData.user });
         return ChatMessage.create(chatData);
     }

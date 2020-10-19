@@ -58,7 +58,7 @@ async function main(){
 	          		let mod = 0; 
 					mod = parseInt(html.find('[id=mod]')[0].value);
 	          		console.log("target: ", target, ", Ability: ", ability, ", Focus: ", focus, ", Mod: ", mod);
-	    			let roll = new game.expanse.AgeRollMod(target, ability, focus, mod);
+	    			let roll = new game.expanse.AgeRoll(target, ability, focus, mod);
 	    			console.log(roll);
 	    			roll.render().then((content) => {
 	        			ChatMessage.create({
