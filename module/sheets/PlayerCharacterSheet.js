@@ -18,10 +18,10 @@ export class PlayerCharacterSheet extends ActorSheet {
             classes: ["the-expanse-tim", "sheet", "player-character", playerCharacterType],
             template: "systems/the-expanse-tim/templates/sheets/playerCharacterSheet.hbs",
             width: 600,
-            height: 600,
+            height: 650,
             tabs: [
                 {
-                    navSelector: ".sheet-tabs",
+                    navSelector: ".sheet-tabsex",
                     contentSelector: ".sheet-body",
                     initial: "main",
                 },
