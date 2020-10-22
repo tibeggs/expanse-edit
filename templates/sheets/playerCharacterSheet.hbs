@@ -1,11 +1,11 @@
 <form class="{{cssClass}}" autocomplete="off">
     {{!-- Sheet Header --}}
-    <header class="sheet-header">
+    <header class="sheet-headerex">
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
-        <h1 class="name prop">
+        <div class="name prop">
             <input name="name" type="text" value="{{actor.name}}" placeholder="Name" />
             <label for="name">Name</label>
-        </h1>
+        </div>
         <div class="sub-header">
             <div class="origin prop">
                 <select name="data.origin" data-dtype="string">
@@ -47,7 +47,7 @@
     </header>
 
     {{!-- Sheet Tab Navigation --}}
-    <nav class="sheet-tabs tabs" data-group="primary">
+    <nav class="sheet-tabsex .tabs" data-group="primary">
         <a class="item" data-tab="main">Main</a>
         <a class="item" data-tab="description">Description</a>
         <a class="item" data-tab="items">Talents & Gear</a>
@@ -232,7 +232,7 @@
                 </div>
             </div>
             <div class="wide-section">
-                <h3>Relationships</h3>
+                <h3>Relationships/Reputation/Membership</h3>
                 <div class="relationship-table">
                     <h4>Name</h4>
                     <h4>Intensity</h4>

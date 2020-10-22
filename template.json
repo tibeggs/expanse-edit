@@ -31,6 +31,7 @@
 			"defense": 10,
 			"armorRating": 0,
 			"armorPenalty": 0,
+			"toughness":  0,
 			"persona": {
 				"calling": "",
 				"destiny": "",

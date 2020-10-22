@@ -27,7 +27,7 @@ export class AgeRollMod extends Roll {
         if (!this._rolled) {
             this.roll();
         }
-        var rolls = this.dice[0].rolls.map((r) => r.roll);
+        var rolls = this.dice[0].results.map((r) => r.result);
         var match = new Set(rolls).size !== 3;
         const chatData = {
             user: chatOptions.user,
@@ -41,9 +41,11 @@ export class AgeRollMod extends Roll {
             total: this.total,
             stuntPoints: match ? rolls[2] : 0,
         };
+        console.log(chatData);
         return renderTemplate(chatOptions.template, chatData);
     }
     async toMessage(chatData) {
+        console.log("here");
         chatData.content = await this.render({ user: chatData.user });
         return ChatMessage.create(chatData);
     }
