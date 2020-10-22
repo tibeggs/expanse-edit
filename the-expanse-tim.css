@@ -3,33 +3,38 @@
 /* This is your Less entry file			*/
 /* ------------------------------------ */
 .the-expanse-tim .window-content {
-  height: 100%;
-  padding: 5px;
-  overflow-y: hidden;
-  background-image: url("./assets/sheet-background.png");
+    height: 100%;
+    padding: 5px;
+    overflow-y: hidden;
+    background-image: url("./assets/sheet-background.png");
 }
+
 .the-expanse-tim .sheet-headerex {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  grid-template-rows: 58px 42px;
-  grid-template-areas: "profile name" "profile sub";
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 58px 42px;
+    grid-template-areas: "profile name" "profile sub";
 }
-.the-expanse-tim .sheet-headerex .profile-img {
-  height: 100%;
-  width: 100%;
-  grid-area: profile;
-  border: 2px black solid;
-}
-.the-expanse-tim .sheet-headerex .name {
-  grid-area: name;
-}
-.the-expanse-tim .sheet-headerex .sub-header {
-  grid-area: sub;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
+
+    .the-expanse-tim .sheet-headerex .profile-img {
+        height: 100%;
+        width: 100%;
+        grid-area: profile;
+        border: 2px black solid;
+    }
+
+    .the-expanse-tim .sheet-headerex .name {
+        grid-area: name;
+    }
+
+    .the-expanse-tim .sheet-headerex .sub-header {
+        grid-area: sub;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
 .the-expanse-tim .sheet-tabsex {
     display: flex;
     margin: 4px;
@@ -42,6 +47,7 @@
     align-items: center;
     justify-content: center;
 }
+
     .the-expanse-tim .sheet-tabsex .item {
         margin: 0px 2%;
         background-color: #4a4d66;
@@ -49,6 +55,13 @@
         flex: 1;
         text-align: center;
     }
+
+.the-expanse-tim .tab.biography.active {
+    display:flex;
+    flex-flow: column;
+    height: 100%;
+}
+
 .the-expanse-tim .sheet-body .item-list .item-collapsible {
     height: 30px;
     line-height: 24px;
@@ -57,6 +70,7 @@
     flex-flow: row nowrap;
     border-bottom: 1px solid #bbb;
 }
+
 .the-expanse-tim .sheet-body .item-list .item-content {
     max-height: 0;
     overflow: hidden;
@@ -70,247 +84,308 @@
     flex: 1;
     text-align: center;
 }
+
 .the-expanse-tim .sheet-body {
-  padding: 10px;
-  margin: 0 5px;
-  overflow: auto;
-}
-.the-expanse-tim .sheet-body .stat-row {
-  display: flex;
-  flex-wrap: nowrap;
-  padding: 0 3px;
+    padding: 10px;
+    margin: 0 5px;
+    overflow: auto;
 }
 
-.the-expanse-tim .sheet-body .wide-section {
-  margin: 5px;
-  background-color: #333547;
-  display: flex;
-  flex-direction: column;
-  padding: 3px;
+    .the-expanse-tim .sheet-body .stat-row {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0 3px;
+    }
+
+    .the-expanse-tim .sheet-body .wide-section.nonfill {
+        height: auto;
+    }
+
+    .the-expanse-tim .sheet-body .wide-section.nogrow {
+        margin: 5px;
+        background-color: #333547;
+        display: flex;
+        flex-direction: column;
+        padding: 3px;
+        height: 100%;
+        flex: 0 1;
+    }
+
+    .the-expanse-tim .sheet-body .wide-section {
+        margin: 5px;
+        background-color: #333547;
+        display: flex;
+        flex-direction: column;
+        padding: 3px;
+        height: 100%;
+        flex: 1 1;
+    }
+
+        .the-expanse-tim .sheet-body .wide-section h3 {
+            color: white;
+            text-align: center;
+            margin: 0;
+        }
+
+        .the-expanse-tim .sheet-body .wide-section ol {
+            background: white;
+            min-height: 30px;
+            margin: 0;
+        }
+
+        .the-expanse-tim .sheet-body .wide-section .editor {
+            padding: 4px;
+            flex-grow: 2;
+            flex-basis: 40px;
+            flex-shrink: 0;
+            background: white;
+        }
+
+            .the-expanse-tim .sheet-body .wide-section .editor .tox {
+                height: 400px !important;
+            }
+
+        .the-expanse-tim .sheet-body .wide-section .entry {
+            display: flex;
+            flex-flow: row nowrap;
+            background: white;
+            align-items: baseline;
+            padding: 2px;
+        }
+
+            .the-expanse-tim .sheet-body .wide-section .entry label {
+                padding: 0 4px;
+                flex-basis: content;
+                color: black;
+            }
+
+    .the-expanse-tim .sheet-body .item-list {
+        list-style: none;
+        margin: 7px 0;
+        padding: 0;
+        overflow-y: auto;
+    }
+
+        .the-expanse-tim .sheet-body .item-list .item {
+            height: 30px;
+            line-height: 24px;
+            padding: 3px;
+            display: flex;
+            flex-flow: row nowrap;
+            border-bottom: 1px solid #bbb;
+        }
+
+        .the-expanse-tim .sheet-body .item-list .item-collapsible img {
+            flex: 0 0 24px;
+            margin-right: 5px;
+        }
+
+        .the-expanse-tim .sheet-body .item-list .item img {
+            flex: 0 0 24px;
+            margin-right: 5px;
+        }
+
+        .the-expanse-tim .sheet-body .item-list .item-name {
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .the-expanse-tim .sheet-body .item-list .item-desc {
+            margin: 0;
+            flex-grow: 2;
+        }
+
+.the-expanse-tim label {
+    padding: 0;
+    color: white;
 }
 
-.the-expanse-tim .sheet-body .wide-section h3 {
-  color: white;
-  text-align: center;
-  margin: 0;
+.the-expanse-tim .prop {
+    background-color: #333547;
+    text-align: center;
+    margin: 2px !important;
+    padding: 3px;
+    flex-grow: 1;
+    flex-basis: 0%;
 }
-.the-expanse-tim .sheet-body .wide-section ol {
-  background: white;
-  min-height: 30px;
-  margin: 0;
+
+    .the-expanse-tim .prop input {
+        height: 22px;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        background-color: white;
+        margin: 0;
+    }
+
+    .the-expanse-tim .prop select {
+        height: 22px;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        background-color: white;
+        margin: 0;
+    }
+
+    .the-expanse-tim .prop label {
+        margin: 0 auto;
+        padding: 0;
+        font-size: x-small;
+        display: block;
+    }
+
+.the-expanse-tim .check-prop {
+    background-color: #333547;
+    margin: 2px !important;
+    padding: 5px;
+    display: flex;
+    flex-flow: row nowrap;
+    flex-shrink: 1;
+    justify-items: center;
 }
-.the-expanse-tim .sheet-body .wide-section .editor {
-  padding: 4px;
-  flex-grow: 2;
-  flex-basis: 40px;
-  flex-shrink: 0;
-  background: white;
-}
-.the-expanse-tim .sheet-body .wide-section .editor .tox {
-  height: 400px !important;
-}
-.the-expanse-tim .sheet-body .wide-section .entry {
-  display: flex;
-  flex-flow: row nowrap;
-  background: white;
-  align-items: baseline;
-  padding: 2px;
-}
-.the-expanse-tim .sheet-body .wide-section .entry label {
-  padding: 0 4px;
-  flex-basis: content;
-  color: black;
-}
-.the-expanse-tim .sheet-body .item-list {
-  list-style: none;
-  margin: 7px 0;
-  padding: 0;
-  overflow-y: auto;
-}
-.the-expanse-tim .sheet-body .item-list .item {
-  height: 30px;
-  line-height: 24px;
-  padding: 3px;
-  display: flex;
-  flex-flow: row nowrap;
-  border-bottom: 1px solid #bbb;
-}
-.the-expanse-tim .sheet-body .item-list .item-collapsible img {
-    flex: 0 0 24px;
-    margin-right: 5px;
-}
-.the-expanse-tim .sheet-body .item-list .item img {
-  flex: 0 0 24px;
-  margin-right: 5px;
-}
-.the-expanse-tim .sheet-body .item-list .item-name {
-  margin: 0;
-  flex-grow: 1;
-}
-.the-expanse-tim .sheet-body .item-list .item-desc {
-    margin: 0;
+
+    .the-expanse-tim .check-prop label {
+        padding-top: 4px;
+    }
+
+.the-expanse-tim .prop.wide {
     flex-grow: 2;
 }
-.the-expanse-tim label {
-  padding: 0;
-  color: white;
-}
-.the-expanse-tim .prop {
-  background-color: #333547;
-  text-align: center;
-  margin: 2px !important;
-  padding: 3px;
-  flex-grow: 1;
-  flex-basis: 0%;
-}
-.the-expanse-tim .prop input {
-  height: 22px;
-  width: 100%;
-  border: none;
-  border-radius: 0;
-  background-color: white;
-  margin: 0;
-}
-.the-expanse-tim .prop select {
-  height: 22px;
-  width: 100%;
-  border: none;
-  border-radius: 0;
-  background-color: white;
-  margin: 0;
-}
-.the-expanse-tim .prop label {
-  margin: 0 auto;
-  padding: 0;
-  font-size: x-small;
-  display: block;
-}
-.the-expanse-tim .check-prop {
-  background-color: #333547;
-  margin: 2px !important;
-  padding: 5px;
-  display: flex;
-  flex-flow: row nowrap;
-  flex-shrink: 1;
-  justify-items: center;
-}
-.the-expanse-tim .check-prop label {
-  padding-top: 4px;
-}
-.the-expanse-tim .prop.wide {
-  flex-grow: 2;
-}
+
 .the-expanse-tim .resource {
-  display: flex;
-  flex-wrap: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
 }
-.the-expanse-tim .resource input {
-  flex-shrink: 1;
-}
-.the-expanse-tim .resource span {
-  padding: 0 4px;
-}
+
+    .the-expanse-tim .resource input {
+        flex-shrink: 1;
+    }
+
+    .the-expanse-tim .resource span {
+        padding: 0 4px;
+    }
+
 .the-expanse-tim h1.prop {
-  border: none;
+    border: none;
 }
-.the-expanse-tim h1.prop input {
-  height: 28px;
-  margin: 0;
-}
-.the-expanse-tim h1.prop label {
-  font-size: medium;
-}
+
+    .the-expanse-tim h1.prop input {
+        height: 28px;
+        margin: 0;
+    }
+
+    .the-expanse-tim h1.prop label {
+        font-size: medium;
+    }
+
 .the-expanse-tim .rollable.small-die {
-  font-size: small;
-  color: black;
+    font-size: small;
+    color: black;
 }
+
 .the-expanse-tim .rollDam.small-die {
-  font-size: small;
-  color: black;
+    font-size: small;
+    color: black;
 }
+
 .the-expanse-tim .rollable.big-die {
-  font-size: x-large;
-  float: right;
-  color: white;
+    font-size: x-large;
+    float: right;
+    color: white;
 }
+
 .the-expanse-tim.sheet.actor {
-  min-width: 560px;
-  min-height: 420px;
+    min-width: 560px;
+    min-height: 420px;
 }
+
 .the-expanse-tim.sheet.item {
-  min-width: 460px;
-  min-height: 400px;
+    min-width: 460px;
+    min-height: 400px;
 }
+
 .player-character .player-main {
-  display: flex;
-  flex-flow: row nowrap;
+    display: flex;
+    flex-flow: row nowrap;
 }
-.player-character .player-main .abilities {
-  padding-top: 2px;
-  flex-basis: 205px;
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-.player-character .player-main .abilities .ability {
-  background: #333547;
-  display: block;
-  padding: 3px;
-  width: 100%;
-  height: 45px;
-}
-.player-character .player-main .abilities .ability input {
-  border: none;
-  text-align: center;
-  background: white;
-  height: 30px;
-  width: 30px;
-}
-.player-character .player-main .content {
-  flex-grow: 1;
-  flex-shrink: 1;
-}
+
+    .player-character .player-main .abilities {
+        padding-top: 2px;
+        flex-basis: 205px;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+        .player-character .player-main .abilities .ability {
+            background: #333547;
+            display: block;
+            padding: 3px;
+            width: 100%;
+            height: 45px;
+        }
+
+            .player-character .player-main .abilities .ability input {
+                border: none;
+                text-align: center;
+                background: white;
+                height: 30px;
+                width: 30px;
+            }
+
+    .player-character .player-main .content {
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
 .player-character .list {
-  width: 100%;
+    width: 100%;
 }
-.player-character .list input {
-  margin: 2px 0;
-}
+
+    .player-character .list input {
+        margin: 2px 0;
+    }
+
 .player-character .relationship-table {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 2fr 1fr 4fr 20px;
-  column-gap: 3px;
-  row-gap: 4px;
-  background: white;
-  padding: 3px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 4fr 20px;
+    column-gap: 3px;
+    row-gap: 4px;
+    background: white;
+    padding: 3px;
 }
-.player-character .relationship-table .relationship-add {
-  grid-column: 4;
-  text-align: center;
-}
-.player-character .relationship-table .relationship-delete {
-  text-align: center;
-}
+
+    .player-character .relationship-table .relationship-add {
+        grid-column: 4;
+        text-align: center;
+    }
+
+    .player-character .relationship-table .relationship-delete {
+        text-align: center;
+    }
+
 .player-character .lined {
-  border: none;
-  border-radius: 0;
-  background: white;
-  background-image: -webkit-linear-gradient(white 20px, black 20px, black 21px, white 21px);
-  background-size: 100% 21px;
-  overflow: hidden;
-  line-height: 21px;
+    border: none;
+    border-radius: 0;
+    background: white;
+    background-image: -webkit-linear-gradient(white 20px, black 20px, black 21px, white 21px);
+    background-size: 100% 21px;
+    overflow: hidden;
+    line-height: 21px;
 }
+
 .dice-roll .die {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #85bbdc;
-  width: 20px;
-  height: 20px;
-  border: 1px solid black;
-  border-radius: 2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #85bbdc;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 2px;
 }
-.dice-roll .die.drama {
-  background-color: #333547;
-  color: white;
-}
+
+    .dice-roll .die.drama {
+        background-color: #333547;
+        color: white;
+    }
